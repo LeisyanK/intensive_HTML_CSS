@@ -1,0 +1,52 @@
+@import "vars";
+
+$position: baseline;
+
+@mixin flex ($position) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: $position;
+}
+
+%font {  // используется строго без переменных
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// однострочный комментарий
+
+.container {
+    max-width: $widthSite;
+}
+
+.subtitle {
+    color: $colorSite;
+}
+
+.nav {
+    display: flex;
+    gap: $flexGap;
+    @extend %font;
+
+    &__link {
+        text-decoration: none;
+    }
+}
+
+.content {
+    display: flex;
+    gap: $flexGap;
+    @include flex(center); // если передавать $position, то получим baseline
+
+    &__item {
+        width: calc($widthSite / 4);
+        height: 200px;
+        border: $borderItem;
+    }
+}
