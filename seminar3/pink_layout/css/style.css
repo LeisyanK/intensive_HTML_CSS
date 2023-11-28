@@ -322,7 +322,8 @@ summary::-webkit-details-marker {
 }
 .catalog-product__card {
   position: relative;
-  width: 32%; /* на gap остается 2%*/
+  width: 32%;
+  /* на gap остается 2%*/
   background-color: #F8F8F8;
   text-align: left;
 }
@@ -690,7 +691,9 @@ summary::-webkit-details-marker {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 23px;
+}
+.product-view__sort-box .sort {
+  justify-content: center;
 }
 
 /*********************************/
@@ -718,6 +721,9 @@ summary::-webkit-details-marker {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+.breadcrumbs-right__link:not(:last-child):hover {
+  color: #F16D7F;
 }
 .breadcrumbs-right__link:not(:last-child)::after {
   content: "/";
@@ -823,12 +829,24 @@ summary::-webkit-details-marker {
 .sort-details {
   position: relative;
 }
+.sort-details[open] .sort-heading {
+  color: #F16D7F;
+}
+.sort-details[open] .down-icon {
+  color: #F16D7F;
+}
 .sort-head {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   gap: 10px;
   margin-bottom: 5px;
+}
+.sort-head:hover .sort-heading {
+  color: #F16D7F;
+}
+.sort-head:hover .down-icon {
+  color: #F16D7F;
 }
 .sort-heading {
   color: #6F6E6E;
@@ -857,6 +875,9 @@ summary::-webkit-details-marker {
   justify-content: start;
   align-items: center;
   gap: 9px;
+}
+.sort-content__box:hover .sort-label {
+  color: #F16D7F;
 }
 .sort-content__box .checkbox {
   border-color: #EBEBEB;
@@ -1002,7 +1023,7 @@ summary::-webkit-details-marker {
   gap: 70px;
   width: 100%;
 }
-.cart-left__buttons-button p {
+.cart-left__buttons-button {
   color: #000;
   font-size: 14px;
   font-style: normal;
@@ -1010,6 +1031,12 @@ summary::-webkit-details-marker {
   line-height: normal;
   padding: 16px 40px;
   border: 1px solid #A4A4A4;
+  transition: all 0.4s;
+}
+.cart-left__buttons-button:hover {
+  background-color: #F16D7F;
+  color: #fff;
+  border: 1px solid #F16D7F;
 }
 .cart-form {
   width: 32%;
@@ -1042,6 +1069,14 @@ summary::-webkit-details-marker {
 }
 .cart-form__text::placeholder {
   color: #B1B1B1;
+}
+.cart-form__text:focus {
+  border-color: #F16D7F;
+  outline: 1px solid #F16D7F;
+}
+.cart-form__text:hover {
+  border-color: #F16D7F;
+  box-shadow: 3px 4px 5px rgba(241, 109, 127, 0.53);
 }
 .cart-form__button {
   color: #4A4A4A;
@@ -1098,6 +1133,11 @@ summary::-webkit-details-marker {
   padding: 1rem 2rem;
   border: 1px solid #F16D7F;
   margin-top: 17px;
+  transition: all 0.3s;
+}
+.cart-form__checkout .amount-button:hover {
+  color: #F16D7F;
+  background-color: #fff;
 }
 
 @media (max-width: 768px) {
