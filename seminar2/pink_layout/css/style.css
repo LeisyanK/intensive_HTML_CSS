@@ -914,7 +914,7 @@ summary::-webkit-details-marker {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   padding-top: 96px;
 }
 .cart-left {
@@ -1017,6 +1017,7 @@ summary::-webkit-details-marker {
   flex-direction: column;
   align-items: start;
   gap: 20px;
+  padding-top: 17px;
 }
 .cart-form__title {
   color: #222;
