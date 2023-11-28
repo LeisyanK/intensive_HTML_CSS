@@ -1,0 +1,39 @@
+$widthSite: 1140px;
+$fontFamily: 'Lato', sans-serif;
+$widthThird: 32%;
+
+$gap: 2%;
+$gapColumn: 30px;
+$horizontalPozition: space-between;
+$verticalPosition: center;
+
+$colorBlock: #222;
+$colorSite: #F16D7F;
+$colorLight: #fff;
+$colorText: #000;
+
+$transition: .4s ease-in-out;
+
+$borderLight: 1px solid $colorLight;
+$borderHover: 1px solid $colorSite;
+
+@mixin flex ($horizontalPozition, $verticalPosition) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $horizontalPozition;
+    align-items: $verticalPosition;
+    // gap: $gap;
+}
+
+@mixin flexCenterColumn ($gap) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gapColumn;
+}
+@mixin flexColumn ($gapColumn) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: $gapColumn;
+}

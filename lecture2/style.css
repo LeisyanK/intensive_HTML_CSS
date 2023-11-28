@@ -15,14 +15,44 @@ summary::-webkit-details-marker {
   padding-right: calc(50% - 570px);
 }
 
+.box-content {
+  overflow: hidden;
+}
+
 .header {
   background-color: #222;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
 .header_left {
   display: flex;
   align-items: center;
   gap: 41px;
+}
+
+#burger {
+  position: absolute;
+  left: -999999px;
+  visibility: hidden;
+}
+#burger:checked ~ .nav {
+  right: -232px;
+}
+
+.nav {
+  background: #FFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  width: 232px;
+  padding: 32px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  transition: right 0.3s;
 }
 
 .top-head {
@@ -56,14 +86,17 @@ summary::-webkit-details-marker {
 .filter-sort {
   height: 132px;
   position: relative;
+  display: flex;
+  gap: 30px;
+  padding-top: 39px;
 }
 
 .filter {
-  padding: 13px 16px 16px;
+  padding-top: 13px;
   box-sizing: border-box;
   width: 360px;
-  position: absolute;
-  top: 39px;
+  position: relative;
+  z-index: 10;
 }
 .filter[open] {
   background: #FFF;
@@ -86,6 +119,13 @@ summary::-webkit-details-marker {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+.filter__content {
+  background-color: #FFF;
+  padding-top: 0;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
 }
 .filter__item[open] .filter__heading {
   color: #F16D7F;
@@ -118,6 +158,52 @@ summary::-webkit-details-marker {
 }
 .filter__link:hover {
   color: #F16D7F;
+}
+
+.sort {
+  display: flex;
+  gap: 28px;
+  padding-top: 12px;
+}
+.sort__details {
+  position: relative;
+}
+.sort__summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sort__heading {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.sort .fa-angle-down {
+  color: #6F6E6E;
+}
+.sort__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #FFF;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  padding: 7px 30px 11px 9px;
+  position: absolute;
+  left: -9px;
+  top: 22px;
+}
+.sort__check {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #6F6E6E;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .product-box {
