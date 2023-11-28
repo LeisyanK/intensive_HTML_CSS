@@ -1090,7 +1090,7 @@ summary::-webkit-details-marker {
 /**************************************************/
 /* cart page */
 .cart {
-    @include flex ($horizontalPozition, $verticalPosition);
+    @include flex ($horizontalPozition, start);
     padding-top: 96px;
 
     &-left {
@@ -1190,6 +1190,7 @@ summary::-webkit-details-marker {
         &-form {
             width: 32%;
             @include flexColumn (20px);
+            padding-top: 17px;
     
             &__title {
                 color: #222;
