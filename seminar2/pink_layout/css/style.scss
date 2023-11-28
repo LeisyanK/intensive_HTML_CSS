@@ -847,9 +847,11 @@ summary::-webkit-details-marker {
     }
     &__sort-box {
         padding: 65px 0;
-        // @include flexColumn (48px);
         @include flex (center, $verticalPosition);
-        gap: 23px;
+
+        .sort {
+            justify-content: center;
+        }
     }
 }
 
@@ -877,6 +879,9 @@ summary::-webkit-details-marker {
             font-style: normal;
             font-weight: 300;
             line-height: normal;
+            &:hover {
+                color: $colorSite;
+            }
             &::after {
                 content: '/';
                 padding-left: 8px;
@@ -997,6 +1002,12 @@ summary::-webkit-details-marker {
     &-details {
         position: relative;
         // margin-right: 28px;
+        &[open] .sort-heading {
+            color: $colorSite;
+        }
+        &[open] .down-icon {
+            color: $colorSite;
+        }
     }
 
     &-head {
@@ -1007,6 +1018,12 @@ summary::-webkit-details-marker {
         // width: 79px;
         // position: relative;
         margin-bottom: 5px;
+        &:hover .sort-heading {
+            color: $colorSite;
+        }
+        &:hover .down-icon {
+            color: $colorSite;
+        }
     }    
     &-heading {
         color: #6F6E6E;
@@ -1014,6 +1031,7 @@ summary::-webkit-details-marker {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        
     }
     .down-icon {
         color: #6F6E6E;
@@ -1034,9 +1052,24 @@ summary::-webkit-details-marker {
             @include flex (start, $verticalPosition);
             gap: 9px;
 
+            &:hover .sort-label {
+                color: $colorSite;
+            }
+
             .checkbox {
                 border-color: #EBEBEB;
             }
+            // &:hover .checkbox {
+            //     outline: 1px solid $colorSite;
+            //     border-color: $colorSite;
+            //     -moz-appearance: none;
+            //     -webkit-appearance: none;
+            //     -o-appearance: none;
+            //     -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
+            //     -moz-box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
+            //     box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
+            // }
+
             .sort-label{
                 color: #6F6E6E;
                 font-family: Roboto;

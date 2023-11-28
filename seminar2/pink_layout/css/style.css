@@ -690,7 +690,9 @@ summary::-webkit-details-marker {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 23px;
+}
+.product-view__sort-box .sort {
+  justify-content: center;
 }
 
 /*********************************/
@@ -718,6 +720,9 @@ summary::-webkit-details-marker {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+.breadcrumbs-right__link:not(:last-child):hover {
+  color: #F16D7F;
 }
 .breadcrumbs-right__link:not(:last-child)::after {
   content: "/";
@@ -823,12 +828,24 @@ summary::-webkit-details-marker {
 .sort-details {
   position: relative;
 }
+.sort-details[open] .sort-heading {
+  color: #F16D7F;
+}
+.sort-details[open] .down-icon {
+  color: #F16D7F;
+}
 .sort-head {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   gap: 10px;
   margin-bottom: 5px;
+}
+.sort-head:hover .sort-heading {
+  color: #F16D7F;
+}
+.sort-head:hover .down-icon {
+  color: #F16D7F;
 }
 .sort-heading {
   color: #6F6E6E;
@@ -857,6 +874,9 @@ summary::-webkit-details-marker {
   justify-content: start;
   align-items: center;
   gap: 9px;
+}
+.sort-content__box:hover .sort-label {
+  color: #F16D7F;
 }
 .sort-content__box .checkbox {
   border-color: #EBEBEB;
