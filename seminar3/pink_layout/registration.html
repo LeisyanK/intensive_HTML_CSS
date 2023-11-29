@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/249c288045.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,7 +19,6 @@
         <div class="header-left">
             <a href="index.html"><img src="img/header/logo.svg" alt="logo" class="logo header-img"></a>
             <a href="#" class="search header-img">
-                <!-- <img src="img/header/search.svg" alt="search line" class="search header-img"> -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27" fill="none">
                     <path
                         d="M18.0596 17.6259C19.6713 15.8658 20.6282 13.6048 20.7698 11.2225C20.9113 8.84018 20.2288 6.48173 18.8369 4.54318C17.445 2.60463 15.4285 1.20404 13.126 0.576619C10.8234 -0.0508009 8.3751 0.13316 6.19217 1.09761C4.00923 2.06205 2.22463 3.74825 1.13804 5.87302C0.0514473 7.9978 -0.270946 10.4318 0.224996 12.7661C0.720938 15.1005 2.00501 17.1932 3.86158 18.6927C5.71814 20.1922 8.03413 21.0072 10.4206 21.0009C12.673 21.004 14.8645 20.27 16.6606 18.9109L24.4086 26.7179C24.4941 26.807 24.5965 26.8781 24.7099 26.927C24.8232 26.9759 24.9452 27.0017 25.0686 27.0029C25.1923 27.0033 25.3148 26.9782 25.4283 26.9292C25.5419 26.8801 25.6441 26.8082 25.7286 26.7179C25.9025 26.537 25.9997 26.2958 25.9997 26.0449C25.9997 25.794 25.9025 25.5528 25.7286 25.3719L18.0596 17.6259ZM1.88662 10.5009C1.89946 8.81563 2.41094 7.17187 3.35659 5.77685C4.30224 4.38183 5.63972 3.29801 7.20044 2.662C8.76115 2.02599 10.4752 1.86627 12.1266 2.20298C13.7779 2.53969 15.2926 3.35775 16.4797 4.55404C17.6668 5.75033 18.4732 7.27129 18.7972 8.92519C19.1212 10.5791 18.9483 12.2919 18.3002 13.8476C17.6522 15.4034 16.5581 16.7325 15.1559 17.6674C13.7536 18.6023 12.1059 19.1011 10.4206 19.1009C8.14916 19.0901 5.97482 18.1784 4.37484 16.566C2.77486 14.9537 1.87998 12.7724 1.88662 10.5009Z"
@@ -137,7 +137,7 @@
 
     <section class="breadcrumbs center">
         <div class="breadcrumbs-left">
-            <h1 class="breadcrumbs-left__heading">SHOPPING CART</h1>
+            <h1 class="breadcrumbs-left__heading">REGISTRATION</h1>
         </div>
         <div class="breadcrumbs-right">
             <!-- <a href="#" class="breadcrumbs-right__link">HOME</a>
@@ -146,93 +146,42 @@
         </div>
     </section>
 
-    <section class="cart center">
-        <div class="cart-left">
-            <div class="cart-left__product">
-                <img class="cart-left__img" src="img/catalog/prod1.png" alt="product">
-                <div class="cart-left__product-content">
-                    <h3 class="product-heading">MANGO PEOPLE T-SHIRT</h3>
-                    <div class="product-parameters">
-                        <p>
-                            <span class="product-parameters__name">Price:</span>
-                            <span class="product-parameters__value product-price">$300</span>
-                        </p>
-                        <p>
-                            <span class="product-parameters__name">Color:</span>
-                            <span class="product-parameters__value">Red</span>
-                        </p>
-                        <p>
-                            <span class="product-parameters__name">Size:</span>
-                            <span class="product-parameters__value">Xl</span>
-                        </p>
-                        <p class="product-parameters__quantity-block">
-                            <span class="product-parameters__name">Quantity:</span>
-                            <input class="product-parameters__quantity" type="number" min="0" value="2">
-                        </p>
-                    </div>
+    <section class="reg center">
+        <form action="#" class="reg-form">
+            <h3 class="reg-form__title form__title">Your Name</h3>
+            <input class="reg-form__text form__text reg-form__text1" type="text" placeholder="First Name">
+            <input class="reg-form__text form__text reg-form__text2" type="text" placeholder="Last Name">
+            <div class="reg-form__gender">
+                <div class="reg-form__gender-radiogroup">
+                    <input id="radio-1" type="radio" name="radio" value="Male" checked>
+                    <label for="radio-1">Male</label>
                 </div>
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </div>
-            <div class="cart-left__product">
-                <img class="cart-left__img" src="img/catalog/prod2.png" alt="product">
-                <div class="cart-left__product-content">
-                    <h3 class="product-heading">MANGO PEOPLE T-SHIRT</h3>
-                    <div class="product-parameters">
-                        <p>
-                            <span class="product-parameters__name">Price:</span>
-                            <span class="product-parameters__value product-price">$300</span>
-                        </p>
-                        <p>
-                            <span class="product-parameters__name">Color:</span>
-                            <span class="product-parameters__value">Red</span>
-                        </p>
-                        <p>
-                            <span class="product-parameters__name">Size:</span>
-                            <span class="product-parameters__value">Xl</span>
-                        </p>
-                        <p class="product-parameters__quantity-block">
-                            <span class="product-parameters__name">Quantity:</span>
-                            <input class="product-parameters__quantity" type="number" value="2">
-                        </p>
-                    </div>
-                </div>
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </div>
-            <div class="cart-left__buttons">
-                <!-- <a class="cart-left__buttons-button">CLEAR SHOPPING CART</a>
-                <a class="cart-left__buttons-button">CONTINUE SHOPPING</a> -->
-                <!-- <button>CLEAR SHOPPING CART</button>
-                    <button>CONTINUE SHOPPING</button> -->
-                <div>
-                    <p class="cart-left__buttons-button">CLEAR SHOPPING CART</p>
-                </div>
-                <div>
-                    <p class="cart-left__buttons-button">CONTINUE SHOPPING</p>
+                <div class="reg-form__gender-radiogroup">
+                    <input id="radio-2" type="radio" name="radio" value="Female">
+                    <label for="radio-2">Female</label>
                 </div>
             </div>
-        </div>
-        <!-- <div class="cart-right"> -->
-        <form action="#" class="cart-form">
-            <h3 class="cart-form__title form__title">SHOPPING ADDRESS</h3>
-            <input class="cart-form__text form__text cart-form__text1" type="text" placeholder="Country" value="Bangladesh">
-            <input class="cart-form__text form__text cart-form__text2" type="text" placeholder="State">
-            <input class="cart-form__text form__text cart-form__text3" type="text" placeholder="Postcode / Zip">
-            <button class="cart-form__button button__grey">GET A QUOTE</button>
-            <div class="cart-form__checkout">
-                <div class="amount">
-                    <p class="amount-subtotal">SUB TOTAL
-                        <span class="amount-subtotal__price">$900</span>
-                    </p>
-                    <p class="amount-grandtotal">GRAND TOTAL
-                        <span class="amount-grandtotal__price">$900</span>
-                    </p>
-                </div>
-                <hr class="amount-line">
-                <button class="amount-button button__pink">PROCEED TO CHECKOUT</button>
-            </div>
+            <h3 class="reg-form__title form__title">Login details</h3>
+            <input class="reg-form__text form__text reg-form__text3" type="email" placeholder="Email">
+            <input class="reg-form__text form__text reg-form__text4" type="password" placeholder="Password">
+            <p class="reg-form__dsc">Please use 8 or more characters, with at least 1 number and a mixture of uppercase
+                and lowercase letters</p>
+            <button class="reg-form__button button__pink">JOIN NOW <span class="right-arrow">&rarr;</span>
+                <!-- <i class="fa-solid fa-arrow-right"></i> -->
+            </button>
         </form>
-
-        <!-- </div> -->
+        <div class="reg-right">
+            <h3 class="reg-right__title">LOYALTY HAS ITS PERKS</h3>
+            <p class="reg-right__text">Get in on the loyalty program where you can earn points and unlock serious perks.
+                Starting with these as soon as you join:</p>
+            <ul class="reg-right__list">
+                <li class="reg-right__list-item">15% off welcome offer</li>
+                <li class="reg-right__list-item">Free shipping, returns and exchanges on all orders</li>
+                <li class="reg-right__list-item">$10 off a purchase on your birthday</li>
+                <li class="reg-right__list-item">Early access to products</li>
+                <li class="reg-right__list-item">Exclusive offers & rewards</li>
+            </ul>
+        </div>
     </section>
 
     <section class="subscribe center flex">

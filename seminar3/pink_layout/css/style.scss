@@ -1,3 +1,13 @@
+@charset "UTF-8";
+// для маркеров списка
+// https: //snipp.ru/html-css/ul-styles?ysclid=lpjfv96g1r675286352
+@counter-style marker-font {
+    system: cyclic;
+    // symbols: "arrow_forward";
+    symbols: url('../img/registration/pick.sgv');
+    suffix: " ";
+}
+
 @-webkit-keyframes vibrate-1 {
     0% {
         -webkit-transform: translate(0);
@@ -98,6 +108,10 @@ summary {
 
 summary::-webkit-details-marker {
     display: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .container {
@@ -371,6 +385,7 @@ summary::-webkit-details-marker {
 
     &-color {
         color: $colorSite;
+        text-align: center;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -505,28 +520,28 @@ summary::-webkit-details-marker {
         // animation: vibrate-1 0.3s linear both;
 
         &__all-products {
-            color: $colorSite;
-            /* font-family: Lato; */
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            padding: 1rem 2rem;
-            border: 1px solid $colorSite;
-            transition: all 0.3s;
-            // transition: color .3s, 
-            //             background-color .3s,
-            //             scale .3s;
+            // color: $colorSite;
+            // /* font-family: Lato; */
+            // font-size: 16px;
+            // font-style: normal;
+            // font-weight: 400;
+            // line-height: normal;
+            // padding: 1rem 2rem;
+            // border: 1px solid $colorSite;
+            // transition: all 0.3s;
+            // // transition: color .3s, 
+            // //             background-color .3s,
+            // //             scale .3s;
 
-            &:hover {
-                color: $colorLight;
-                background-color: $colorSite;
-                transform: scale(1.05);
-            }
+            // &:hover {
+            //     color: $colorLight;
+            //     background-color: $colorSite;
+            //     transform: scale(1.05);
+            // }
 
-            &:active {
-                transform: scale(0.8);
-            }
+            // &:active {
+            //     transform: scale(0.8);
+            // }
         }
 
     }
@@ -1287,48 +1302,48 @@ summary::-webkit-details-marker {
         padding-top: 17px;
 
         &__title {
-            color: #222;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
+            // color: #222;
+            // font-size: 16px;
+            // font-style: normal;
+            // font-weight: 300;
+            // line-height: normal;
         }
 
         &__text {
-            width: 100%;
-            height: 45px;
-            border: 1px solid #A4A4A4;
-            padding-left: 17px;
-            color: #222;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
+            // width: 100%;
+            // height: 45px;
+            // border: 1px solid #A4A4A4;
+            // padding-left: 17px;
+            // color: #222;
+            // font-size: 13px;
+            // font-style: normal;
+            // font-weight: 300;
+            // line-height: normal;
 
-            &::placeholder {
-                color: #B1B1B1;
-            }
-            &:focus {
-                border-color: $colorSite;
-                outline: 1px solid $colorSite;
-            }
-            &:hover {
-                // outline: 1px solid $colorSite;
-                border-color: $colorSite;
-                // box-shadow: 5px 6px 7px rgba(0, 0, 0, 0.13);
-                box-shadow: 3px 4px 5px rgba(241, 109, 127, 0.53);
-            }
+            // &::placeholder {
+            //     color: #B1B1B1;
+            // }
+            // &:focus {
+            //     border-color: $colorSite;
+            //     outline: 1px solid $colorSite;
+            // }
+            // &:hover {
+            //     // outline: 1px solid $colorSite;
+            //     border-color: $colorSite;
+            //     // box-shadow: 5px 6px 7px rgba(0, 0, 0, 0.13);
+            //     box-shadow: 3px 4px 5px rgba(241, 109, 127, 0.53);
+            // }
         }
 
         &__button {
-            color: #4A4A4A;
-            font-size: 11px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            border: 1px solid #A4A4A4;
-            background-color: #fff;
-            padding: 1rem 2rem;
+            // color: #4A4A4A;
+            // font-size: 11px;
+            // font-style: normal;
+            // font-weight: 300;
+            // line-height: normal;
+            // border: 1px solid #A4A4A4;
+            // background-color: #fff;
+            // padding: 1rem 2rem;
             margin-bottom: 37px; //57px;
         }
 
@@ -1372,20 +1387,20 @@ summary::-webkit-details-marker {
                 }
 
                 &-button {
-                    color: #FFF;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: normal;
-                    background-color: $colorSite;
-                    padding: 1rem 2rem;
-                    border: 1px solid $colorSite;
+                    // color: #FFF;
+                    // font-size: 16px;
+                    // font-style: normal;
+                    // font-weight: 300;
+                    // line-height: normal;
+                    // background-color: $colorSite;
+                    // padding: 1rem 2rem;
+                    // border: 1px solid $colorSite;
                     margin-top: 17px;
-                    transition: all .3s;
-                    &:hover {
-                        color: $colorSite;
-                        background-color: #fff;
-                    }
+                    // transition: all .3s;
+                    // &:hover {
+                    //     color: $colorSite;
+                    //     background-color: #fff;
+                    // }
                 }
             }
         }
@@ -1398,6 +1413,81 @@ summary::-webkit-details-marker {
     // }
 
 }
+
+
+
+/**************************************************/
+/* registration page */
+.reg {
+    padding-top: 64px;
+    padding-bottom: 96px;
+    @include flex ($horizontalPozition, start); 
+
+    &-form {
+        width: $widthThird;
+        @include flexColumn (20px);
+        &__gender {
+            padding-top: 12px;
+            padding-bottom: 32px;
+            display: flex;
+            gap: 20px;
+            &-radiogroup {
+                display: flex;
+                gap: 10px;
+            }
+            label {
+                color: #000;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+        }
+        &__dsc {
+            color: #B1B1B1;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+        &__button {
+            margin-top: 19px; // +20px from gap
+            display: flex;
+            gap: 20px;
+        }
+    }
+    &-right {
+        width: 58%;
+        @include flexColumn (22px);
+
+        &__title,
+        &__text,
+        &__list-item {
+            color: #000;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+        // &__text {
+        //     color: #000;
+        //     font-size: 24px;
+        //     font-style: normal;
+        //     font-weight: 300;
+        //     line-height: normal;
+        // }
+        &__list {
+            @include flexColumn (16px);
+            // list-style-type: marker-font;
+            &-item:before {
+                // content: '&#10003;';
+                content: '\2713';
+                padding-right: 22px;
+            }
+        }
+    }
+}
+
 
 
 
