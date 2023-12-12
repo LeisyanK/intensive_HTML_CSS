@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+.title {
+    font-size: 2rem;
+}
+.heading {
+    font-size: 1.5rem;
+}
+.text {
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    /* width: 100px; */ flex-grow: 1;
+    flex-basis: 100px; /* min ширина элемента. Если установлен flex-wrap: wrap;, то элементы перестроятся вниз при уменьшении ширины страницы */
+    height: 100px;
+    border: 1px solid #000;
+}
+
+
+.content2 {
+    display: flex;
+}
+.box {
+    flex-shrink: 1;
+    width: 250px;
+    height: 100px;
+    border: 1px solid #000;
+}
+.box_2{
+    flex-shrink: 2;
+}
+
+.content3 {
+    display: grid;
+    /* grid-template-columns: repeat(7, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, 200px); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: auto;
+    grid-auto-flow: dense;
+}
+.grids {
+    min-height: 100px;
+    border: 1px solid #000;
+}
+.grids_3 {
+    grid-column: span 2;
+    grid-row: span 2;
+    
+}
+@media (max-width: 768px) {
+    .content3 {
+        /* grid-template-columns: repeat(4, 1fr); */
+    }
+}
