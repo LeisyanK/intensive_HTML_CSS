@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("planet.jpg");
+    width: 100vw;
+    height: 100vh;
+    counter-reset: count;
+}
+svg {
+    width: 50px;
+    fill: yellow;
+}
+
+.counter{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    &::after {
+        content: counter(count);
+    }
+}
+ /* .light {
+    visibility: hidden;
+    position: absolute;
+    left: -99999999px;
+    &:checked {
+        counter-increment: count;
+    }
+} */
+
+.bulb-box {
+    position: absolute;
+    .light {
+        visibility: hidden;
+        position: absolute;
+        left: -99999999px;
+        &:checked {
+            counter-increment: count;
+        }
+        &:checked .light{ /* мое */
+            /* counter-increment: count; */
+            visibility: hidden;
+        }
+        &:checked ~ svg {
+            /* counter-increment: count; */
+            /* visibility: hidden; */
+            position: absolute;
+            left: -999999999px;
+        }
+    }
+}
+
+.bulb {
+    position: absolute;
+}
+
+.bulb_1 {
+    animation: turn-on-1 3s 0s both;
+}
+.bulb_2 {
+    animation: turn-on-2 3s 0s both;
+}
+.bulb_3 {
+    animation: turn-on-3 3s 0s both;
+}
+@keyframes turn-on-1 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: random(100) + vh;
+        left: random(100) + vh;
+    }
+}
+@keyframes turn-on-2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: random(80) + vh;
+        left: random(75) + vh;
+    }
+}
+@keyframes turn-on-3 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: random(90) + vh;
+        left: random(85) + vh;
+    }
+}
