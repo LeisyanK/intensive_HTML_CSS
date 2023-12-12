@@ -7,7 +7,6 @@
     }
 
     .container {
-        // width: 736px;
         width: $widthTablet;
     }
 
@@ -26,13 +25,11 @@
         margin-bottom: 155px;
 
         &-top {
-            // gap: 20px;
             margin-bottom: 20px;
         }
     }
 
     .catalog {
-        // margin-bottom: 65px;
 
         &-title {
             margin-bottom: 4px;
@@ -47,14 +44,6 @@
         &-list {
             row-gap: 16px;
         }
-
-        // margin-bottom: 33px;
-
-        &__card {
-            // width: $widthHalf;
-
-            // gap: 16px; остается 2%
-        }
     }
 
 
@@ -62,14 +51,11 @@
     .feature {
         flex-direction: column;
         justify-content: space-between;
-        /* gap: 49px; */
         padding: 0;
-        /* margin-top: 49px;*/
         padding-bottom: 64px;
 
         &-group {
             padding: 49px 0 0 0;
-            // width: 47%;
             width: $widthHalf;
         }
     }
@@ -84,14 +70,12 @@
 
         &-left,
         &-right {
-            // width: 47%;
             width: $widthHalf;
         }
     }
 
     .footer {
         &-left {
-            // width: 47%;
             width: $widthHalf;
         }
     }
@@ -102,8 +86,10 @@
     .swiper-slide img {
         max-height: 565px;
     }
+
     .productView {
         margin-top: 0px;
+
         &__dsc {
             &-text {
                 width: 75%;
@@ -117,73 +103,70 @@
 
     .filter-sort {
         height: 81px;
+
         &__box {
-            // min-width: $widthTablet;
-            // @include flex ($horizontalPozition, $verticalPosition);
-            // flex-wrap: nowrap;
-            padding-top: 11px;  // 24px - 13px = 11px
+            padding-top: 11px; // 24px - 13px = 11px
         }
     }
+
     .filter {
         width: $widthHalf;
     }
+
     .sort {
         width: calc($widthTablet - $widthHalf - $gap);
+
         &_position {
             padding-top: 11px;
         }
     }
-    
-    
-        /* cart page */
-    
-        .cart {
-            @include flexColumn ($gapColumn * 2);
-            align-content: center;
-    
-            &-left {
-                width: 99%;
-                justify-content: center;
-            }
-    
-            &-buttons {
-                justify-content: space-around;
-            }
+
+
+    /* cart page */
+
+    .cart {
+        @include flexColumn ($gapColumn * 2);
+        align-content: center;
+
+        &-left {
+            width: 99%;
+            justify-content: center;
         }
-    
-        .cartForm {
-            @include flex ($horizontalPozition, $verticalPosition);
-            flex-wrap: nowrap;
-            width: 98%;
-    
-            &-address,
-            &-checkout {
-                width: $widthHalf;
-            }
+
+        &-buttons {
+            justify-content: space-around;
         }
+    }
+
+    .cartForm {
+        @include flex ($horizontalPozition, $verticalPosition);
+        flex-wrap: nowrap;
+        width: 98%;
+
+        &-address,
+        &-checkout {
+            width: $widthHalf;
+        }
+    }
 
 
     /* registration page */
 
     .reg {
         padding-top: 40px;
+
         &-right {
             width: $widthHalf;
         }
+
         &-title,
         &-text,
         &-list-item {
             font-size: 16px;
         }
     }
+
     .regForm {
         width: $widthHalf;
     }
-
-
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    
-}
-

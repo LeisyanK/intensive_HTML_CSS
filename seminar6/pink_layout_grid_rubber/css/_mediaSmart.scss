@@ -1,33 +1,8 @@
 // @media (max-width: 375px) {
 @media (max-width: 767px) {
-    .container {
-        // width: $widthSmart;
-    }
-
-    // .center {
-    //     padding-left: calc(50% - $widthSmart / 2);
-    //     /*375px*/
-    //     padding-right: calc(50% - $widthSmart / 2);
-    // }
-
     .search-form {
         display: none;
     }
-
-    /* .header-left {  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        width: 35%;
-    }
-    .header-right {
-        width: 60%;
-    } */
-    /* .header-right */
-    // .logo {
-    //     padding-left: 16px;
-    // }
-
-    // .burger {
-    //     padding-right: 16px;
-    // }
 
     .header-right__link {
         visibility: hidden;
@@ -48,8 +23,6 @@
 
         &-right {
             padding: 148px 0;
-            /* padding: 148px 0; */
-            // width: 99%;
             display: flex;
             justify-content: center;
         }
@@ -73,19 +46,16 @@
         &-top {
             flex-direction: column;
             gap: 32px;
-            // width: 95%;
             width: $widthFull;
             margin-bottom: 32px;
         }
 
         &-group {
-            /* width: 91%; */
             text-align: center;
             align-items: center;
         }
 
         &-bottom {
-            // width: 95%;
             width: $widthFull;
 
             &-img {
@@ -96,7 +66,6 @@
 
     .catalog {
         max-width: 100%;
-        // margin-bottom: 96px;
 
         &-text {
             margin-bottom: 65px;
@@ -115,18 +84,12 @@
             justify-content: center;
         }
 
-        &__card {
-            // width: 96%;
-            // width: $widthFull;
-        }
     }
-
 
     .feature {
         padding-bottom: 81px;
 
         &-group {
-            // width: 94%;
             width: $widthFull;
         }
     }
@@ -136,7 +99,6 @@
         gap: 59px;
 
         &-left {
-            // width: 90%;
             width: $widthFull;
 
             &__dsc {
@@ -145,25 +107,21 @@
         }
 
         &-right {
-            // width: 90%;
             width: $widthFull;
 
             &__text {
                 font-size: 14px;
             }
         }
-
     }
 
     .footer {
         flex-direction: column;
         padding-top: 43px;
         padding-bottom: 9px;
-        // gap: 40px;
 
         &-left,
         &-right {
-            // width: 90%;
             width: $widthFull;
             display: flex;
             justify-content: center;
@@ -187,11 +145,13 @@
 
     .productView {
         margin-bottom: 64px;
+
         &__dsc {
             &-text {
                 width: 90%;
             }
         }
+
         &__sort-box {
             padding-top: 50px;
             padding-bottom: 65px;
@@ -203,7 +163,7 @@
 
     .breadcrumbs {
         @include flexCenterColumn (32px);
-        // margin-bottom: 64px;
+
         &_padding {
             padding-top: 60px;
             padding-bottom: 60px;
@@ -217,7 +177,6 @@
         }
 
         &-right {
-            // margin-bottom: 4px;
             padding-bottom: 46px;
         }
     }
@@ -225,35 +184,17 @@
     .filter {
         width: $widthFull;
         max-width: 20px;
-        // max-width: 360px;
         position: absolute;
+
         &-heading {
             display: none;
         }
 
-        &-head {
-            // display: block;
-        }
-
         &[open] {
-            // width: $widthFull;
-            // max-width: $widthFull;
             max-width: 360px;
         }
-        // &[open] .filterContent {
-        //     // width: 99%;
-        //     width: $widthFull;
-        // }
     }
 
-    // .sort {
-    //     // position: absolute;
-    //     // left: 15%;
-    // }
-
-    // .filterContent__link {
-    //     box-sizing: content-box;
-    // }
     .sort {
         &_position {
             margin-left: 40px;
@@ -261,16 +202,10 @@
     }
 
 
-
     /* cart page */
     .cart {
         @include flexColumn (48px);
         padding-bottom: 96px;
-
-        &-img {
-            // width: 144px;
-            // height: 188px;
-        }
 
         .product {
 
@@ -281,7 +216,6 @@
 
             &-parameters {
                 gap: 4px;
-                // padding-bottom: 38px;
 
                 &__name,
                 &__value {
@@ -295,42 +229,40 @@
             max-width: 50%;
             margin-top: 14px;
         }
+
         .fa-times {
             margin-top: 18px;
             margin-right: 12px;
             width: 10px;
         }
+
         &-button {
             font-size: 12px;
             padding: 9px 18px;
         }
     }
 
-    // .fa-times {
-    //     margin-top: 18px;
-    //     margin-right: 12px;
-    //     width: 10px;
-    // }
     .cartForm {
         @include flexColumn (48px);
-        &-address,
-            &-checkout {
-                width: 99%;
-            }
-    }
 
+        &-address,
+        &-checkout {
+            width: 99%;
+        }
+    }
 
 
     /* registration page */
 
     .reg {
         @include flexColumn (40px);
+
         &-right {
             width: $widthFull;
         }
+
         .regForm {
             width: $widthFull;
         }
     }
-
 }

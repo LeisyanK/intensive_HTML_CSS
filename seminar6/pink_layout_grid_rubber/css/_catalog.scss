@@ -9,10 +9,11 @@
             padding-bottom: 60px;
         }
     }
+
     &_padding {
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
     &-heading {
         color: $colorSite;
@@ -22,8 +23,6 @@
         line-height: normal;
     }
 
-
-    // &-right {
     &-link:not(:last-child) {
         color: #636363;
         font-size: 14px;
@@ -51,27 +50,20 @@
 
 .filter-sort {
     position: relative;
-    // width: $widthSite;
     height: 134px;
 
     &__box {
         position: absolute;
         width: 100%;
-        // width: $widthSite;
         @include flex (space-between, start);
         flex-wrap: nowrap;
         gap: $gap;
-        padding-top: 38px;  // 51px - 13px = 38px
-        // padding-bottom: 64px;
+        padding-top: 38px; // 51px - 13px = 38px
         z-index: 1;
     }
 }
 
 .filter {
-    // background-color: #FFF;
-    // box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-    // width: $widthThird;
-    // padding: 13px 16px 16px;
     padding-top: 13px;
     position: relative;
     z-index: 3;
@@ -103,6 +95,7 @@
         display: flex;
         align-items: center;
         gap: 11px;
+
         svg {
             height: 14px;
         }
@@ -119,11 +112,9 @@
 
 .filterContent {
     padding-bottom: 16px;
-    &-head {
-        // padding-left: 11px;
 
+    &-head {
         padding-top: 18px;
-        
     }
 
     &-head[open] .filterContent-heading {
@@ -163,21 +154,15 @@
         padding-left: 11px;
         border-left: 5px solid $colorSite;
         border-bottom: 1px solid #EBEBEB;
-
-        // border-bottom: 1px solid #EBEBEB;
     }
 }
 
-
 .sort {
-    // padding: 16px 0;
     @include flex (start, start);
     flex-wrap: nowrap;
     gap: 28px;
     cursor: pointer;
 
-    // position: relative;
-    // z-index: 2;
     &_position {
         padding-top: 13px;
         position: relative;
@@ -201,7 +186,7 @@
         align-items: center;
         flex-wrap: nowrap;
         gap: 10px;
-        
+
         &:hover .sort-heading {
             color: $colorSite;
         }
@@ -217,7 +202,6 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-
     }
 
     .down-icon {
@@ -234,7 +218,6 @@
         min-width: 79px;
         margin-top: 5px;
         position: absolute;
-        // left: -10px;
         right: 0;
 
         &__box {
@@ -248,17 +231,6 @@
             .checkbox {
                 border-color: #EBEBEB;
             }
-
-            // &:hover .checkbox {
-            //     outline: 1px solid $colorSite;
-            //     border-color: $colorSite;
-            //     -moz-appearance: none;
-            //     -webkit-appearance: none;
-            //     -o-appearance: none;
-            //     -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
-            //     -moz-box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
-            //     box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
-            // }
 
             .sort-label {
                 color: #6F6E6E;
@@ -275,7 +247,6 @@
 
 .catalog {
     text-align: center;
-    // margin-bottom: 96px;
 
     &-title {
         color: $colorBlock;
@@ -298,21 +269,8 @@
     &-button {
         margin-top: 48px;
         margin-bottom: 96px;
-        /* -webkit-animation: vibrate-1 0.3s linear infinite both;
-    	animation: vibrate-1 0.3s linear infinite both; */
-        // -webkit-animation: vibrate-1 0.3s linear both;
-        // animation: vibrate-1 0.3s linear both;
-
-        &__all-products {
-            // см button_white
-            
-        }
-
     }
 }
-
-
-
 
 .catalog-list__bottom {
     margin-bottom: 48px;
@@ -320,25 +278,14 @@
 
 .product {
     &-list {
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
-        // @include flex($horizontalPozition, $verticalPosition);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        // gap: $gap;
-        // gap: 30px;
         column-gap: 2%;
-        // column-gap: 30px;
         row-gap: 30px;
-        // margin-bottom: 48px;
     }
 
     &__card {
         position: relative;
-        // width: calc(($widthSite - 2 * $gap) / 3);
-        // width: $widthThird;
-        /* на gap остается 2%*/
         background-color: #F8F8F8;
         text-align: left;
 
@@ -356,7 +303,6 @@
         }
 
         &-text {
-            // padding: 26px 16px 20px;
             padding: 24px 16px;
         }
 
@@ -388,9 +334,7 @@
 
         &-add {
             position: absolute;
-            /* top: 188px; */
             top: 35%;
-            /* left: 111px; */
             left: 31%;
             border: 1px solid #fff;
             width: 139px;
@@ -421,10 +365,6 @@
     }
 }
 
-// .catalog-product {
-//     margin-bottom: 48px;
-// }
-
 .catalog-pagination {
     @include flex (center, $verticalPosition);
     margin-bottom: 96px;
@@ -433,10 +373,8 @@
         border: 1px dashed #EBEBEB;
         background-color: #fff;
         border-radius: 1px;
-        // width: 25%;
         padding: 12px 16px;
 
-        // text-align: center;
         &::after {
             content: '>';
             padding-left: 16px;
@@ -453,7 +391,6 @@
             font-weight: 300;
             line-height: normal;
 
-            // padding-right: 22px;
             &:hover {
                 color: $colorSite;
             }
@@ -463,5 +400,4 @@
             padding-left: 16px;
         }
     }
-
 }
