@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@keyframes duck-fly-1 {
+  0% {
+    left: -75px;
+    top: 20vh;
+  }
+  50% {
+    left: 7vw;
+    top: 20vh;
+  }
+  100% {
+    left: 100vw;
+    top: 16vh;
+  }
+}
+@keyframes duck-fly-2 {
+  0% {
+    left: -75px;
+    top: 13vh;
+  }
+  50% {
+    left: 41vw;
+    top: 3vh;
+  }
+  100% {
+    left: 100vw;
+    top: 55vh;
+  }
+}
+@keyframes duck-fly-3 {
+  0% {
+    left: -75px;
+    top: 69vh;
+  }
+  50% {
+    left: 14vw;
+    top: 65vh;
+  }
+  100% {
+    left: 100vw;
+    top: 5vh;
+  }
+}
+body {
+  position: relative;
+  counter-reset: count;
+  /* count - это название счетчика*/
+  height: 100vh;
+  margin: 0;
+  background-image: url(fon.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.duck-check {
+  position: absolute;
+  visibility: hidden;
+  left: -9999999px;
+}
+.duck-check:checked {
+  counter-increment: count;
+}
+.duck-check:checked ~ label {
+  display: none;
+}
+
+.counter-info {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+}
+.counter-info::before {
+  content: counter(count);
+}
+
+.duck {
+  position: absolute;
+}
+.duck__img {
+  width: 75px;
+}
+.duck_1 {
+  animation: duck-fly-1 10s ease-in 3s both;
+}
+.duck_2 {
+  animation: duck-fly-2 10s ease-in 6s both;
+}
+.duck_3 {
+  animation: duck-fly-3 10s ease-in 9s both;
+}/*# sourceMappingURL=style.css.map */

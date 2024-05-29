@@ -1,0 +1,93 @@
+$widthDuck: 75px;
+$countDuck: 3;
+
+// @keyframes duck-fly {
+//     0% {
+//         left: -$widthDuck;
+//         // top: 50dvh;
+//         top: random(90) + vh;
+//     }
+//     50% {
+//         // left: 45vw;
+//         left: random(60) + vw;
+//         // top: 20vh;
+//         top: random(90) + vh;
+//     }
+//     100% {
+//         left: 100vw;
+//         // top: 65%;
+//         top: random(90) + vh;
+//     }
+// }
+
+@for $i from 1 through $countDuck {
+    @keyframes duck-fly-#{$i} {
+            0% {
+                left: -$widthDuck;
+                // top: 50dvh;
+                top: random(90) + vh;
+            }
+    
+            50% {
+                // left: 45vw;
+                left: random(60) + vw;
+                // top: 20vh;
+                top: random(90) + vh;
+            }
+    
+            100% {
+                left: 100vw;
+                // top: 65%;
+                top: random(90) + vh;
+            }
+        }
+}
+
+body {
+    position: relative;
+    counter-reset: count;
+    /* count - это название счетчика*/
+    height: 100vh;
+    margin: 0;
+    background-image: url(fon.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.duck-check {
+    // display: none;
+    position: absolute;
+    visibility: hidden;
+    left: -9999999px;
+    &:checked {
+        counter-increment: count;
+    }
+    &:checked ~ label {
+        display: none;
+    }
+}
+
+.counter-info {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    &::before {
+        content: counter(count);
+    }
+}
+
+.duck {
+    position: absolute;
+    &__img {
+        width: $widthDuck;
+    }
+    // &_1 {
+    //     animation: duck-fly-1 10s ease-in both;
+    // }
+    @for $i from 1 through $countDuck {
+        &_#{$i} {
+            animation: duck-fly-#{$i} 10s ease-in #{$i*3}s both;
+        }
+    }
+}
